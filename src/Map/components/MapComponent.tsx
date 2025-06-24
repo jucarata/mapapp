@@ -15,7 +15,7 @@ const MapComponent = ({ location }: MapComponentProps) => {
 
     mapRef.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: "/wazee-style.json",
+      style: `${import.meta.env.BASE_URL}wazee-style.json`,
       center: location,
       zoom: 18,
       pitch: 60,
